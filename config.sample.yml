@@ -4,5 +4,5 @@ DATABASE:
   PORT: 5432
   NAME: pismo
   USERNAME: pismo
-  PASSWORD: pismo
+  PASSWORD: "****"
   QUERY: sslmode=disable&timezone=UTC
