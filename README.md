@@ -17,4 +17,13 @@
 
 Have you ever thought about how a payment system works? This project is a simple implementation of a payment system. It allows you to create accounts and transactions.
 
+## How to run
 
+To run the project, you need to have Docker installed. Then, you can run the following command:
+
+```
+cp config.sample.yml config.yml
+mkdir -p out/
+go build -o ./out/payments
+./out/payments
+```

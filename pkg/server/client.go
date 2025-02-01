@@ -33,7 +33,7 @@ func (s *Server) Start() error {
 	}
 
 	go func() {
-		log.Printf("Starting http server on port %d\n", s.conf.Port)
+		log.Printf("Starting server on port %d\n", s.conf.Port)
 
 		err := s.srv.Serve(lis)
 		if err != nil && err != http.ErrServerClosed {
