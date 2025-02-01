@@ -15,10 +15,6 @@ type Config struct {
 	Query    string
 }
 
-type MigrationConfig struct {
-	Path string
-}
-
 func (cfg Config) ConnectionString() string {
 	var kvs []string
 

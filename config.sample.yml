@@ -1,0 +1,8 @@
+DATABASE:
+  DRIVER: postgres
+  HOST: localhost
+  PORT: 5432
+  NAME: pismo
+  USERNAME: pismo
+  PASSWORD: pismo
+  QUERY: sslmode=disable&timezone=UTC
