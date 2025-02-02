@@ -1,3 +1,5 @@
 config.yml
 out/
 **/.env
+coverage/
+junit-unit.xml

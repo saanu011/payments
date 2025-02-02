@@ -1,7 +1,7 @@
 DATABASE:
   DRIVER: postgres
   HOST: localhost
-  PORT: 5432
+  PORT: 6432
   NAME: pismo
   USERNAME: pismo
   PASSWORD: "****"

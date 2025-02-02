@@ -1,0 +1,8 @@
+#!/bin/bash
+
+PACKAGES=$(go list payments/... | grep -Ev "mock")
+
+echo $PACKAGES
+
+gotestsum --junitfile=junit-unit.xml --format=dots -- -race -coverpkg=$PACKAGES -coverprofile=coverage/coverage-unit.out -covermode=atomic $PACKAGES
+go tool cover -func coverage/coverage-unit.out

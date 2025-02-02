@@ -6,8 +6,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"payments/src/app"
-	"payments/src/config"
+	"payments/app"
+	"payments/config"
 )
 
 const configFile = "config.yml"

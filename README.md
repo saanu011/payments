@@ -21,9 +21,15 @@ Have you ever thought about how a payment system works? This project is a simple
 
 To run the project, you need to have Docker installed. Then, you can run the following command:
 
+```bash
+./bin/app_start
 ```
-cp config.sample.yml config.yml
-mkdir -p out/
-go build -o ./out/payments
-./out/payments
+
+## How to test
+
+To test the project, you need to have Docker installed. It will help with DB related unit tests.
+You can run the following command:
+
+```bash
+./bin/test_unit
 ```
