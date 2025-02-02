@@ -33,3 +33,29 @@ You can run the following command:
 ```bash
 ./bin/test_unit
 ```
+
+## Endpoints
+
+### Create Account
+
+```azure
+POST /accounts
+
+request: {"email": "john.doe@mail.com", "password": "secret password"}
+```
+
+### Get Account
+
+```azure
+POST /accounts/:account_id
+
+response: {"id": "some_id", "email": "john.doe@mail.com", "password": "secret password"}
+```
+
+### Create Transaction
+
+```azure
+POST /transaction
+
+request: {"account_id": "account id", "operation_type_id": 1, "amount": 105.2}
+```
