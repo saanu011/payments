@@ -1,0 +1,7 @@
+services:
+  postgres:
+    image: postgres
+    container_name: ${COMPOSE_PROJECT_NAME}_postgres
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    env_file: .env

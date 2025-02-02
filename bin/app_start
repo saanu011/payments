@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "copying app config files..."
+cp config.sample.yml config.yml
+echo "copying docker configs..."
+cp docker/.env.sample docker/.env
+echo "starting docker..."
+docker compose -f docker/docker-compose.yml up -d
+echo "docker running"
+echo "running migration..."
+go run db/main.go
+echo "migration complete"
+echo "===================="
+echo "starting app..."
+mkdir -p out/
+go build -o ./out/payments
+./out/payments
