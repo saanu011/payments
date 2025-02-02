@@ -25,6 +25,13 @@ To run the project, you need to have Docker installed. Then, you can run the fol
 ./bin/app_start
 ```
 
+What this command does?
+1. copies configs from sample config file to a new file
+2. install dependencies (if there is some missing dependencies please run `go mod tidy`)
+3. starts necessary services (database, etc)
+4. runs the migration (we have a simple migration to create tables)
+5. starts the application
+
 ## How to test
 
 To test the project, you need to have Docker installed. It will help with DB related unit tests.
@@ -47,7 +54,7 @@ request: {"email": "john.doe@mail.com", "password": "secret password"}
 ### Get Account
 
 ```azure
-POST /accounts/:account_id
+GET /accounts/:account_id
 
 response: {"id": "some_id", "email": "john.doe@mail.com", "password": "secret password"}
 ```
